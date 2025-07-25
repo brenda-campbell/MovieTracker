@@ -59,31 +59,56 @@ GitHub Codespaces provides a complete, configurable dev environment in the cloud
 
 ### Creating a Codespace
 
-1. **From the Repository**
-   - Navigate to the [MovieTracker repository](https://github.com/brenda-campbell/MovieTracker)
+1. **Navigate to the Repository**
+   - Go to the [MovieTracker repository](https://github.com/brenda-campbell/MovieTracker)
+   - You'll see the repository's main page with files, folders, and a green button
+
+2. **Find the Code Button**
+   - Look for the bright green **"< > Code"** button (located near the top-right of the file list)
+   - This button is positioned next to other buttons like "Go to file" and "Add file"
+   - The button has a download icon and the text "Code"
+
+3. **Access Codespaces Menu**
    - Click the green **"< > Code"** button
-   - Select the **"Codespaces"** tab
+   - A dropdown menu will appear with two tabs at the top:
+     - **"Local"** tab (shows clone options)
+     - **"Codespaces"** tab (what we want)
+   - Click on the **"Codespaces"** tab
+
+4. **Create Your Codespace**
+   - In the Codespaces tab, you'll see:
+     - A text saying "No codespaces"
+     - A green button **"Create codespace on main"**
    - Click **"Create codespace on main"**
 
-2. **Wait for Setup**
-   - Codespace will automatically install dependencies
+5. **Wait for Setup**
+   - GitHub will create and configure your cloud development environment
+   - You'll see a loading screen with setup progress
    - This usually takes 2-3 minutes for the initial setup
+   - The environment will automatically open in your browser when ready
 
 ### Building and Running in Codespace
 
 Once your Codespace is ready:
 
-1. **Install dependencies** (if not auto-installed)
+1. **Install GitHub Copilot (Recommended)**
+   - In the VS Code interface, click the **Extensions** icon in the left sidebar (it looks like four squares)
+   - Search for **"GitHub Copilot"**
+   - Click **"Install"** on the GitHub Copilot extension
+   - You may need to sign in to GitHub and accept the Copilot terms
+   - This will provide AI-powered code suggestions while you develop
+
+2. **Install dependencies** (if not auto-installed)
    ```bash
    npm install
    ```
 
-2. **Start the development server**
+3. **Start the development server**
    ```bash
    npm run dev
    ```
 
-3. **Access the application**
+4. **Access the application**
    - Codespace will automatically forward port 5173
    - Click the **"Open in Browser"** notification or
    - Go to the **"Ports"** tab and click the globe icon next to port 5173
@@ -113,6 +138,25 @@ To test the production build:
 - **Terminal**: Full terminal access with all project commands available
 - **Persistent Storage**: Your changes are saved and persist between Codespace sessions
 - **Resource Management**: Codespace automatically stops after 30 minutes of inactivity to save resources
+
+### Visual Guide for GitHub Newcomers
+
+**Finding the Code Button:**
+- On the repository main page, the green "Code" button is prominently displayed
+- It's located in the same row as the repository name and description
+- The button is positioned between the file list and the "About" section on the right
+
+**Understanding the Codespaces Tab:**
+- When you click "Code", you'll see two tabs: "Local" and "Codespaces"
+- "Local" is for downloading/cloning to your computer
+- "Codespaces" is for creating a cloud development environment
+- If you don't see the Codespaces tab, make sure you're signed into GitHub
+
+**VS Code Interface in Codespace:**
+- The Codespace opens VS Code in your browser
+- Left sidebar contains: Explorer (files), Search, Source Control, Extensions, etc.
+- Terminal is at the bottom (use Ctrl+` to toggle)
+- Main area shows your code files
 
 ### Build Commands
 
