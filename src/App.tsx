@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useKV } from '@github/spark/hooks'
-import { Film, Plus, Search } from '@phosphor-icons/react'
+import { useLocalStorage } from './hooks/useLocalStorage'
+import { FilmStrip, Plus, MagnifyingGlass } from '@phosphor-icons/react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { MovieSearch } from './components/MovieSearch'
@@ -30,7 +30,7 @@ interface UserMovie {
 }
 
 function App() {
-  const [userMovies, setUserMovies] = useKV<UserMovie[]>('user-movies', [])
+  const [userMovies, setUserMovies] = useLocalStorage<UserMovie[]>('user-movies', [])
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null)
   const [selectedUserMovie, setSelectedUserMovie] = useState<UserMovie | null>(null)
   const [showDetails, setShowDetails] = useState(false)
@@ -106,7 +106,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-accent/20 rounded-lg">
-                <Film className="h-6 w-6 text-accent" />
+                <FilmStrip className="h-6 w-6 text-accent" />
               </div>
               <div>
                 <h1 className="text-xl font-bold">CineLog</h1>
@@ -130,11 +130,11 @@ function App() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
             <TabsTrigger value="collection" className="gap-2">
-              <Film className="h-4 w-4" />
+              <FilmStrip className="h-4 w-4" />
               My Movies
             </TabsTrigger>
             <TabsTrigger value="search" className="gap-2">
-              <Search className="h-4 w-4" />
+              <MagnifyingGlass className="h-4 w-4" />
               Search
             </TabsTrigger>
           </TabsList>
@@ -167,7 +167,7 @@ function App() {
 
       <MovieDetails
         movie={selectedMovie}
-        userMovie={selectedUserMovie}
+        userMovie={selectedUserMovie || undefined}
         open={showDetails}
         onClose={closeDetails}
         onAddToList={handleAddToList}

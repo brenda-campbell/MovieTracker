@@ -1,4 +1,4 @@
-import { Film, Eye, Clock, Heart } from '@phosphor-icons/react'
+import { FilmStrip, Eye, Clock, Heart } from '@phosphor-icons/react'
 import { MovieCard } from './MovieCard'
 import { Card } from '@/components/ui/card'
 
@@ -88,7 +88,7 @@ export function MovieCollection({ userMovies, onMovieClick }: MovieCollectionPro
   if (userMovies.length === 0) {
     return (
       <div className="text-center py-16 space-y-4">
-        <Film className="h-16 w-16 mx-auto text-muted-foreground" />
+        <FilmStrip className="h-16 w-16 mx-auto text-muted-foreground" />
         <div>
           <h2 className="text-2xl font-semibold mb-2">Start Your Movie Journey</h2>
           <p className="text-muted-foreground">
@@ -121,7 +121,7 @@ export function MovieCollection({ userMovies, onMovieClick }: MovieCollectionPro
           color="bg-muted text-muted-foreground"
         />
         <StatCard
-          icon={Film}
+          icon={FilmStrip}
           label="Total Movies"
           count={userMovies.length}
           color="bg-primary/20 text-primary"

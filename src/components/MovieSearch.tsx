@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Search } from '@phosphor-icons/react'
+import { MagnifyingGlass } from '@phosphor-icons/react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -176,7 +176,7 @@ export function MovieSearch({ onMovieSelect }: MovieSearchProps) {
   return (
     <div className="w-full max-w-2xl mx-auto space-y-4">
       <div className="relative">
-        <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+        <MagnifyingGlass className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder="Search for movies..."
           value={query}

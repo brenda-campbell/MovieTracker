@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Film } from '@phosphor-icons/react'
+import { FilmStrip } from '@phosphor-icons/react'
 
 interface MoviePosterProps {
   src: string
@@ -25,7 +25,7 @@ export function MoviePoster({ src, alt, className = "", fallbackTitle }: MoviePo
     return (
       <div className={`bg-gradient-to-br from-card to-muted flex items-center justify-center relative ${className}`}>
         <div className="text-center p-4">
-          <Film className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
+          <FilmStrip className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
           {fallbackTitle && (
             <p className="text-xs text-muted-foreground font-medium leading-tight line-clamp-3">
               {fallbackTitle}
