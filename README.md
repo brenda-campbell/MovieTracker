@@ -1,4 +1,20 @@
-# 🎬 CineLog - Personal Movie Tracker
+# 🎬 CineLog - Personal Movi## 📸 Application Preview
+
+Here's what CineLog looks like when you're tracking your movie journey:
+
+![CineLog Application Screenshot](./images/cinelog-screenshot.png)
+
+*The main dashboard showing your movie collection organized by status, with beautiful movie posters and an elegant dark theme.*
+
+**What you'll see in the app:**
+- **Header**: CineLog branding with "Add Movie" and navigation buttons
+- **Statistics Cards**: Quick overview showing 0 Watched, 1 Currently Watching, 2 Want to Watch, and 3 Total Movies
+- **Currently Watching**: Featured section showing movies you're actively watching (like "Fight Club" in the example)
+- **Recently Watched**: Section for movies you've completed (empty in this example - ready for your first reviews!)
+- **Want to Watch**: Your movie wishlist with posters (showing movies like "Inception" and "Pulp Fiction")
+- **Dark Cinematic Theme**: Elegant dark background with gold accents that creates a premium movie theater experience
+
+> **Note**: To add the screenshot to your repository, save the provided image as `cinelog-screenshot.png` in the `images` directory.er
 
 A beautiful, personal movie tracking application that helps you catalog, rate, and discover films you love. Think of it as Goodreads for movies - organize your viewing journey with an elegant, cinematic interface.
 
@@ -26,7 +42,15 @@ A beautiful, personal movie tracking application that helps you catalog, rate, a
 - **Organized Views**: Browse by category with "Recently Watched", "Currently Watching", and "Want to Watch" sections
 - **Visual Appeal**: Cinematic dark theme with elegant typography and smooth animations
 
-## 🚀 Getting Started
+## � Application Preview
+
+Here's what CineLog looks like when you're tracking your movie journey:
+
+![CineLog Application Screenshot](./images/cinelog-screenshot.png)
+
+*The main dashboard showing your movie collection organized by status, with beautiful movie posters and an elegant dark theme.*
+
+## �🚀 Getting Started
 
 ### Prerequisites
 - Node.js (version 18 or higher)
