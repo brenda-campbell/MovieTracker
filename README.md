@@ -53,6 +53,67 @@ A beautiful, personal movie tracking application that helps you catalog, rate, a
 4. **Open your browser**
    Navigate to `http://localhost:5173` to start tracking movies!
 
+## 🚀 GitHub Codespaces Quick Start
+
+GitHub Codespaces provides a complete, configurable dev environment in the cloud. Perfect for quick development or testing without local setup.
+
+### Creating a Codespace
+
+1. **From the Repository**
+   - Navigate to the [MovieTracker repository](https://github.com/brenda-campbell/MovieTracker)
+   - Click the green **"< > Code"** button
+   - Select the **"Codespaces"** tab
+   - Click **"Create codespace on main"**
+
+2. **Wait for Setup**
+   - Codespace will automatically install dependencies
+   - This usually takes 2-3 minutes for the initial setup
+
+### Building and Running in Codespace
+
+Once your Codespace is ready:
+
+1. **Install dependencies** (if not auto-installed)
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+3. **Access the application**
+   - Codespace will automatically forward port 5173
+   - Click the **"Open in Browser"** notification or
+   - Go to the **"Ports"** tab and click the globe icon next to port 5173
+
+### Production Build in Codespace
+
+To test the production build:
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Preview the build**
+   ```bash
+   npm run preview
+   ```
+
+3. **Access preview**
+   - Port 4173 will be forwarded automatically
+   - Open the preview URL from the "Ports" tab
+
+### Codespace Tips
+
+- **Port Forwarding**: Automatically handles port forwarding for dev server (5173) and preview (4173)
+- **Extensions**: VS Code extensions are pre-configured for optimal development
+- **Terminal**: Full terminal access with all project commands available
+- **Persistent Storage**: Your changes are saved and persist between Codespace sessions
+- **Resource Management**: Codespace automatically stops after 30 minutes of inactivity to save resources
+
 ### Build Commands
 
 - **Development**: `npm run dev` - Start the development server with hot reload
