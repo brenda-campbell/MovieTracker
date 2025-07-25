@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { MoviePoster } from './MoviePoster'
 
 interface Movie {
   id: string
@@ -105,14 +106,14 @@ export function MovieDetails({
         
         <div className="grid gap-6">
           <div className="flex gap-6">
-            <img
-              src={movie.poster}
-              alt={movie.title}
-              className="w-48 h-72 object-cover rounded-lg"
-              onError={(e) => {
-                e.currentTarget.src = '/api/placeholder/300/450'
-              }}
-            />
+            <div className="w-48 h-72 flex-shrink-0">
+              <MoviePoster
+                src={movie.poster}
+                alt={movie.title}
+                className="w-full h-full rounded-lg"
+                fallbackTitle={movie.title}
+              />
+            </div>
             <div className="flex-1 space-y-4">
               <div>
                 <p className="text-muted-foreground">{movie.year} • {movie.runtime}</p>

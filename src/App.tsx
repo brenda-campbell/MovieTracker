@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { MovieSearch } from './components/MovieSearch'
 import { MovieCollection } from './components/MovieCollection'
 import { MovieDetails } from './components/MovieDetails'
+import { CustomMovieForm } from './components/CustomMovieForm'
 import { toast } from 'sonner'
 
 interface Movie {
@@ -86,6 +87,12 @@ function App() {
     setShowDetails(true)
   }
 
+  const handleMovieCreate = (movie: Movie) => {
+    setSelectedMovie(movie)
+    setSelectedUserMovie(null)
+    setShowDetails(true)
+  }
+
   const closeDetails = () => {
     setShowDetails(false)
     setSelectedMovie(null)
@@ -143,8 +150,15 @@ function App() {
             <div className="text-center py-8">
               <h2 className="text-2xl font-semibold mb-2">Discover Movies</h2>
               <p className="text-muted-foreground mb-8">
-                Search for movies to add to your collection
+                Search for movies to add to your collection or create your own
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <CustomMovieForm onMovieCreate={handleMovieCreate} />
+                <span className="text-muted-foreground text-sm">or</span>
+                <span className="text-sm text-muted-foreground">Search existing movies below</span>
+              </div>
+              
               <MovieSearch onMovieSelect={handleMovieSelect} />
             </div>
           </TabsContent>

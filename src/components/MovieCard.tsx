@@ -2,6 +2,7 @@ import { Star } from '@phosphor-icons/react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { MoviePoster } from './MoviePoster'
 
 interface Movie {
   id: string
@@ -58,13 +59,11 @@ export function MovieCard({ userMovie, onClick, onStatusChange }: MovieCardProps
     <Card className="group overflow-hidden hover:scale-105 transition-all duration-200 hover:shadow-lg cursor-pointer">
       <div onClick={onClick}>
         <div className="aspect-[2/3] relative overflow-hidden">
-          <img
+          <MoviePoster
             src={movie.poster}
             alt={movie.title}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              e.currentTarget.src = '/api/placeholder/300/450'
-            }}
+            className="w-full h-full"
+            fallbackTitle={movie.title}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute top-2 left-2">
